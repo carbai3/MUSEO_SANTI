@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Hace que el contenido se distribuya verticalmente */
+    align-items: center; /* Centra horizontalmente el contenido */
+    background-color: #f4f4f4; /* Color de fondo opcional para mejorar la visibilidad */
+    position: relative; /* Permite que los elementos se posicionen en relación al contenedor */
+}
+
+h1 { 
+    font-size: 3em; 
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px; /* Espacio superior */  
+    color: #333; /* Color del texto */  
+  }  
+
+  .background-images {  
+    position: fixed;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+    overflow: hidden;  
+    z-index: -1;  
+}  
+
+.background-images img {  
+    width: 100%;  
+    height: 100%;  
+    object-fit: cover;  
+    transition: opacity 1s ease-in-out;  
+}  
+
+form {  
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
+    justify-content: center; /* Centra horizontalmente el contenido dentro del formulario */
+    gap: 15px; /* Espaciado entre los elementos */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Color de fondo más opaco para el formulario */
+    border-radius: 10px; /* Bordes redondeados para el formulario */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+    width: 100%;
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: auto; /* Centra el formulario horizontalmente en la página */
+} 
+
+label {  
+    font-weight: bold; /* Hacer las etiquetas más destacadas */  
+    margin-bottom: 5px; /* Espacio entre la etiqueta y el campo */
+}  
+
+input, select {  
+    padding: 10px;  
+    border: 1px solid #ccc;  
+    border-radius: 5px;  
+    width: calc(100% - 22px); /* Ajusta el ancho para incluir padding y border */
+}  
+
+button {  
+    padding: 10px;  
+    background-color: #007BFF;  
+    color: white;  
+    border: none; /* Elimina el borde predeterminado del botón */
+    border-radius: 5px;  
+    cursor: pointer;  
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+}  
+
+button:hover {  
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse sobre el botón */
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
+    padding: 20px;
+    gap: 50px; /* Aumenta el espacio entre las tarjetas */
+}
+
+.card {
+    border: 1px solid #ddd; /* Borde de la tarjeta */
+    border-radius: 16px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga de la tarjeta */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada para un efecto de profundidad */
+    background-color: #fff; /* Color de fondo de la tarjeta */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transición suave para el efecto hover */
+    padding: 15px; /* Espaciado interno de la tarjeta */
+    display: flex; /* Usar flexbox para alinear los elementos */
+    flex-direction: column; /* Alinear elementos en columna */
+    justify-content: space-between; /* Espacio entre los elementos para empujar el botón hacia abajo */
+    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
+}
+
+.card img {
+    width: 100%; /* Asegura que la imagen ocupe el 100% del ancho de la tarjeta */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 150px; /* Limita la altura máxima de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área asignada sin distorsionarse */
+    display: block; /* Asegura que se trate como un bloque para centrarlo */
+    margin-left: auto; /* Centra horizontalmente */
+    margin-right: auto; /* Centra horizontalmente */
+}
+
+.card h3 {
+    font-size: 1.8em; /* Aumenta el tamaño del título para mayor impacto */
+    margin: 10px 0; /* Espacio alrededor del título */
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 1.2em; /* Tamaño más pequeño para los párrafos */
+}
+
+.card .date {
+    font-size: 1.2em; /* Tamaño de fuente más pequeño para la fecha */
+    color: #666; /* Color de texto opcional para la fecha */
+}
+
+/* Efecto hover para las tarjetas */
+.card:hover {
+    transform: translateY(-5px) scale(1.05); /* Aumenta el tamaño y lo eleva al pasar el mouse */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Sombra más intensa al pasar el mouse */
+}
+
+.ver-mas {
+    background-color: #007BFF; /* Color azul para el botón */
+    padding: 10px;
+    margin-top: auto; /* Espacio entre el contenido y el botón */
+    width: 100%; /* Ajusta el ancho automáticamente */
+    text-align: center;
+    text-decoration: none;
+    color: white; /* Texto blanco en el botón */
+    border-radius: 5px; /* Bordes redondeados para el botón */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+}
+
+.ver-mas:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse sobre el botón */
+}
+
+/* Estilos para la ventana modal */
+.modal {
+    display: none; /* Oculta la modal por defecto */
+    position: fixed; /* Fija la posición en la pantalla */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+    height: 100%; /* Asegura que ocupe todo el alto de la pantalla */
+    overflow-y: auto; /* Permite desplazamiento vertical si es necesario */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro y semi-transparente */
+    display: flex; /* Usamos flexbox para centrar verticalmente */  
+    align-items: center; /* Centra verticalmente el contenido */  
+    justify-content: center; /* Centra horizontalmente */
+}
+
+.modal-content {  
+    background-color: #fefefe;  
+    margin: auto;  
+    padding: 20px;  
+    border-radius: 10px; /* Bordes redondeados */  
+    max-width: 90%; /* Cambia el ancho a tu preferencia */  
+    width: 500px; /* Ancho fijo para evitar que sea demasiado grande */
+    position: relative;
+    top: 40%; /* Mueve hacia abajo desde la parte superior */
+    transform: translateY(-35%); /* Ajusta para centrar verticalmente */
+    max-height: 80%; /* Limita la altura máxima del modal */  
+    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido es grande */  
+}
+
+/* Ajustes para las imágenes dentro de la modal */
+.modal-content img {
+    width: 100%; /* Asegura que la imagen ocupe el 100% del ancho del contenedor modal */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block;
+}
+
+/* Estilos para cerrar la modal */
+.close-modal {
+    position: absolute; /* Posiciona el botón en la esquina superior derecha */
+    top: 10px;
+    right: 15px;
+    color: #333; /* Color del texto del botón de cerrar */
+    font-size: 30px; /* Tamaño del texto del botón de cerrar */
+    font-weight: bold; /* Negrita para destacar el botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Efecto hover para el botón de cerrar */
+.close-modal:hover {
+    color: #ff0000; /* Cambia a rojo al pasar el mouse sobre el botón de cerrar */
+}
+
+.pagination {
+    display: flex; /* Usar flexbox para alinear los botones */
+    justify-content: center; /* Centra los botones horizontalmente */
+    margin-top: 20px; /* Espacio superior para separar de la cuadrícula */
+}
+
+.pagination button {
+    background-color: #007BFF; /* Color azul para el botón */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 20px 10px; /* Espacio entre los botones */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+}
+
+.pagination button:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse sobre el botón */
+}
+
+.pagination button:disabled {
+    background-color: #ccc; /* Color gris para el botón deshabilitado */
+    cursor: not-allowed; /* Cambia el cursor a no permitido */
+}
